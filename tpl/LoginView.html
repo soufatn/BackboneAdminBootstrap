@@ -1,0 +1,58 @@
+
+	<div class="modal-header">
+		<h3>Veuillez vous connecter</h3>
+	</div>
+	<div class="modal-body">
+		<div class="login" style="background-color:transparent !important">
+		<div class="content">
+		<form class="form-vertical login-form" action="index.html" novalidate="novalidate">
+			<div class="control-group">
+				<!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
+				<label class="control-label visible-ie8 visible-ie9">Email</label>
+				<div class="controls">
+					<div class="input-icon left">
+						<i class="icon-user"></i>
+						<input id="loginUsername" class="m-wrap placeholder-no-fix" type="text" placeholder="Email" name="username">
+					</div>
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label visible-ie8 visible-ie9">Mot de passe</label>
+				<div class="controls">
+					<div class="input-icon left">
+						<i class="icon-lock"></i>
+						<input id="loginPassword" class="m-wrap placeholder-no-fix" type="password" placeholder="Mot de passe" name="password">
+					</div>
+				</div>
+			</div>
+			<div class="form-actions" style="background-color:transparent">
+				<label class="checkbox">
+					<div style="position:relative;display: inline-block;zoom: 1;vertical-align: middle;margin-left:22px"><input type="checkbox" name="remember" value="1" style=""></div> Rester connecté
+				</label>
+				<button type="submit" class="btn blue pull-right loginAction">
+					Valider <i class="m-icon-swapright m-icon-white"></i>
+				</button>            
+			</div>
+			<div class="alert alert-error hide loginError">
+				<button class="close" data-dismiss="alert"></button>
+				<span>Enter any username and password.</span>
+			</div>
+			<div class="forget-password">
+				<h4>Mot de passe oublié ?</h4>
+				<p>
+					cliquez <a href="javascript:;" class="" id="forget-password">ici</a>
+					pour réinitialiser votre mot de passe.
+				</p>
+			</div>
+			<div class="create-account">
+				<p>
+					Pas encore de compte ?&nbsp; 
+					<a href="javascript:;" id="register-btn" class="">Créer un compte</a>
+				</p>
+			</div>
+		</form>
+		</div>
+		</div>
+	</div>
+
+	<button type="button" data-dismiss="modal" class="btn closeModal hide">Fermer</button>

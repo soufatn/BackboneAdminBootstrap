@@ -1,0 +1,30 @@
+{
+  "prehome": {
+    "title"  : "Simple et facile, la meilleure webplateforme Instagram",
+    "speech" : "SimpleStagram est une plateforme Instagram en ligne. Vous pouvez facilement rechercher, découvrir et partager les photos que vous aimez. Cette application est bientôt disponible sur iPad et Android", 
+    "button" : "Se connecter avec"
+  },
+  "header": {
+    "search"    : "Rechercher...",
+    "popular"   : "Populaire",
+    "myfriends" : "Mes amis",
+    "mypage"    : "Mon profil",
+    "login"     : "Se connecter",
+    "nav" : {
+      "myprofile" : "Mon profile",
+      "logout"    : "Se déconnecter"
+    }
+  },
+  "popular": {
+    "popular" : "Populaires"
+  },
+  "media": {
+    "leave_comment" : "Laisser un commentaire",
+    "send_comment"  : "Envoyer",
+    "share"         : "Partager",
+    "comments"      : "Commentaires"
+  },
+  "userprofile" : {
+    "recent" : "Récentes photos"
+  }
+}

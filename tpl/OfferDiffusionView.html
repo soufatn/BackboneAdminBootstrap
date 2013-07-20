@@ -1,0 +1,79 @@
+			<!-- BEGIN PAGE CONTAINER-->
+			<div class="container-fluid">
+				<!-- BEGIN PAGE HEADER-->
+				<div class="row-fluid">
+					<div class="span12"> 
+						<!-- BEGIN PAGE TITLE & BREADCRUMB-->
+						<h3 class="page-title">
+							<%= name %> <small>Edition de l'offre</small>
+						</h3>
+						<ul class="breadcrumb">
+							<li>
+								<i class="icon-home"></i>
+								<a href="#dashboard">Accueil</a> 
+								<i class="icon-angle-right"></i>
+							</li>
+							<li>
+								<a href="#offers">Mes offres</a>
+								<i class="icon-angle-right"></i>
+							</li>
+							<li>
+								<b><%= name %></b>
+							</li>
+						</ul>
+						<!-- END PAGE TITLE & BREADCRUMB-->
+					</div>
+				</div>
+				<!-- END PAGE HEADER-->
+
+				<!-- BEGIN PAGE CONTENT-->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="tabbable tabbable-custom boxless">
+							<ul class="nav nav-tabs">
+								<li class=""><a href="#offer/<%= id %>" >Informations générales</a></li>
+								<li class=""><a class="" href="#offer/<%= id %>/participation" >Participation</a></li>
+								<li class=""><a class="" href="#offer/<%= id %>/eligibility" >Eligibilité</a></li>
+								<li class=""><a class="" href="#offer/<%= id %>/gain" >Gain</a></li>
+								<li class="active"><a class="" href="#offer/<%= id %>/diffusion" >Diffusion</a></li>
+							</ul>
+							<div class="tab-content">
+								<div class="tab-pane active" id="tab_1">
+									<div class="portlet box">
+										<div class="portlet-body form">
+											<!-- BEGIN FORM-->
+											<form action="#" class="form-horizontal">
+												<div class="control-group">
+													<label class="control-label">Applications</label>
+													<div class="controls">
+														<select class="span6 m-wrap" multiple="multiple" data-placeholder="Choose a Category" tabindex="1">
+															<option value="Category 1">Courrier (non démat.)</option>
+															<option value="Category 1">Consosmart</option>
+															<option value="Category 2">Consosmart mobile</option>
+															<option value="Category 1">Nivea</option>
+															<option value="Category 2">Nivea mobile</option>
+															<option value="Category 1">Tropicana</option>
+															<option value="Category 2">Tropicana mobile</option>
+														</select>
+													</div>
+												</div>
+												<div class="form-actions">
+													<button type="submit" class="btn blue"><i class="icon-ok"></i>
+														Enregister
+													</button>
+													<button type="button" class="btn">
+														Annuler
+													</button>
+												</div>
+											</form>
+											<!-- END FORM--> 
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- END PAGE CONTENT-->         
+
+			</div>

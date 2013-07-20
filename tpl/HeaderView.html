@@ -1,0 +1,186 @@
+      <div class="container-fluid">
+        <!-- BEGIN LOGO -->
+        <a class="brand" href="#dashboard">
+          <img src="lib/metronic_1.3/template_content/assets/img/logo.png" alt="logo"/>
+        </a>
+
+        <div class="navbar hor-menu hidden-phone hidden-tablet">
+          <div class="navbar-inner">
+            <ul class="nav">
+              <!--
+              <li class="active">
+                <a href="index.html">
+                Tableau de bord
+                <span class="selected"></span>
+                </a>
+              </li>
+              -->
+              
+              <li class="">
+                <a href="#dashboard">
+                Tableau de bord
+                <span class="selected"></span>
+                </a>
+              </li>
+
+              <li>
+                <a href="">Besoin d'aide ?</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- END LOGO -->
+        <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+        <a href="javascript:;" class="btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+        <img src="lib/metronic_1.3/template_content/assets/img/menu-toggler.png" alt="" />
+        </a>          
+        <!-- END RESPONSIVE MENU TOGGLER -->            
+        <!-- BEGIN TOP NAVIGATION MENU -->              
+        <ul class="nav pull-right">
+          <!-- BEGIN NOTIFICATION DROPDOWN -->   
+          <li class="dropdown" id="header_notification_bar">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <i class="icon-warning-sign"></i>
+            <% if(notifications.length > 0) { %>
+            <span class="badge"><%= notifications.length %></span>
+            <% } %>
+            </a>
+
+            <ul class="dropdown-menu extended notification">
+
+              <% if(notifications.length > 0) { %>
+              <li>
+                <p>Vous avez 14 notifications</p>
+              </li>
+              <% } %>
+              
+              <li>
+                <a href="#">
+                <span class="label label-success"><i class="icon-plus"></i></span>
+                New user registered. 
+                <span class="time">à l'instant</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                <span class="label label-important"><i class="icon-bolt"></i></span>
+                Server #12 overloaded. 
+                <span class="time">15 mins</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                <span class="label label-warning"><i class="icon-bell"></i></span>
+                Server #2 not respoding.
+                <span class="time">22 mins</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                <span class="label label-info"><i class="icon-bullhorn"></i></span>
+                Application error.
+                <span class="time">40 mins</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                <span class="label label-important"><i class="icon-bolt"></i></span>
+                Database overloaded 68%. 
+                <span class="time">2 hrs</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                <span class="label label-important"><i class="icon-bolt"></i></span>
+                2 user IP blocked.
+                <span class="time">5 hrs</span>
+                </a>
+              </li>
+              <li class="external">
+                <a href="#">Tout voir <i class="m-icon-swapright"></i></a>
+              </li>
+            </ul>
+          </li>
+          <!-- END NOTIFICATION DROPDOWN -->
+          <!-- BEGIN INBOX DROPDOWN -->
+          <li class="dropdown" id="header_inbox_bar">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <i class="icon-envelope"></i>
+
+            <% if(messages.length > 0) { %>
+            <span class="badge"><%= messages.length %></span>
+            <% } %>
+            </a>
+            <ul class="dropdown-menu extended inbox">
+
+              <% if(messages.length > 0) { %>
+              <li>
+                <p>Vous avez 12 nouveaux messages</p>
+              </li>
+              <% } %>
+
+              <li>
+                <a href="inbox.html?a=view">
+                <span class="photo"><img src="./lib/metronic_1.3/template_content/assets/img/avatar2.jpg" alt="" /></span>
+                <span class="subject">
+                <span class="from">Lisa Wong</span>
+                <span class="time">à l'instant</span>
+                </span>
+                <span class="message">
+                Vivamus sed auctor nibh congue nibh. auctor nibh
+                auctor nibh...
+                </span>  
+                </a>
+              </li>
+              <li>
+                <a href="inbox.html?a=view">
+                <span class="photo"><img src="./lib/metronic_1.3/template_content/assets/img/avatar3.jpg" alt="" /></span>
+                <span class="subject">
+                <span class="from">Richard Doe</span>
+                <span class="time">16 mins</span>
+                </span>
+                <span class="message">
+                Vivamus sed congue nibh auctor nibh congue nibh. auctor nibh
+                auctor nibh...
+                </span>  
+                </a>
+              </li>
+              <li>
+                <a href="inbox.html?a=view">
+                <span class="photo"><img src="./lib/metronic_1.3/template_content/assets/img/avatar1.jpg" alt="" /></span>
+                <span class="subject">
+                <span class="from">Bob Nilson</span>
+                <span class="time">2 hrs</span>
+                </span>
+                <span class="message">
+                Vivamus sed nibh auctor nibh congue nibh. auctor nibh
+                auctor nibh...
+                </span>  
+                </a>
+              </li>
+              <li class="external">
+                <a href="inbox.html">Tout voir <i class="m-icon-swapright"></i></a>
+              </li>
+            </ul>
+          </li>
+          <!-- END INBOX DROPDOWN -->
+          <!-- BEGIN USER LOGIN DROPDOWN -->
+          <li class="dropdown user">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <img alt="" src="https://secure.gravatar.com/avatar/3a62a1b16abda4eb3f9e1eeca4f3f629?s=28&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" />
+            <span class="username"><%= firstname %> <%= lastname %></span>
+            <i class="icon-angle-down"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="extra_profile.html"><i class="icon-user"></i> Mon profil</a></li>
+              <li><a href="page_calendar.html"><i class="icon-calendar"></i> Mon planning</a></li>
+              <li><a href="inbox.html"><i class="icon-envelope"></i> Messages (3)</a></li>
+              <li class="divider"></li>
+              <li><a href="#logout"><i class="icon-key"></i> Se déconnecter</a></li>
+            </ul>
+          </li>
+          <!-- END USER LOGIN DROPDOWN -->
+        </ul>
+        <!-- END TOP NAVIGATION MENU --> 
+      </div>

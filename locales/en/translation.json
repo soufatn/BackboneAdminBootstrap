@@ -1,0 +1,30 @@
+{
+  "prehome": {
+    "title"  : "Clean & simple, the best web Instagram app",
+    "speech" : "SimpleStagram is a pretty cool user-friendly Instagram viewer. You can easily search, discover and share things you love. SimpleStagram is also available on Ipad and Android.", 
+    "button" : "Login with"
+  },
+  "header": {
+    "search"    : "Search things u love...",
+    "popular"   : "Popular",
+  	"myfriends" : "My friends",
+    "mypage"    : "me",
+    "login"     : "Login",
+    "nav" : {
+      "myprofile" : "My profile",
+      "logout"    : "Logout"
+    }
+  },
+  "popular": {
+    "popular" : "Popular"
+  },
+  "media": {
+    "leave_comment" : "Leave a comment",
+    "send_comment"  : "Comment",
+    "share"         : "Share",
+    "comments"      : "Comments"
+  },
+  "userprofile" : {
+    "recent" : "Recent"
+  }
+}

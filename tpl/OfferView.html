@@ -1,0 +1,134 @@
+			<!-- BEGIN PAGE CONTAINER-->
+			<div class="container-fluid">
+				<!-- BEGIN PAGE HEADER-->
+				<div class="row-fluid">
+					<div class="span12"> 
+						<!-- BEGIN PAGE TITLE & BREADCRUMB-->
+						<h3 class="page-title">
+							<%= name %> <small>Edition de l'offre</small>
+						</h3>
+						<ul class="breadcrumb">
+							<li>
+								<i class="icon-home"></i>
+								<a href="#dashboard">Accueil</a> 
+								<i class="icon-angle-right"></i>
+							</li>
+							<li>
+								<a href="#offers">Mes offres</a>
+								<i class="icon-angle-right"></i>
+							</li>
+							<li>
+								<b><%= name %></b>
+							</li>
+						</ul>
+						<!-- END PAGE TITLE & BREADCRUMB-->
+					</div>
+				</div>
+				<!-- END PAGE HEADER-->
+
+				<!-- BEGIN PAGE CONTENT-->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="tabbable tabbable-custom boxless">
+							<ul class="nav nav-tabs">
+								<li class="active"><a href="#offer/<%= id %>" >Informations générales</a></li>
+								<li class=""><a class="" href="#offer/<%= id %>/participation" >Participation</a></li>
+								<li class=""><a class="" href="#offer/<%= id %>/eligibility" >Eligibilité</a></li>
+								<li class=""><a class="" href="#offer/<%= id %>/gain" >Gain</a></li>
+								<li class=""><a class="" href="#offer/<%= id %>/diffusion" >Diffusion</a></li>
+							</ul>
+							<div class="tab-content">
+								<div class="tab-pane active" id="tab_1">
+									<div class="portlet box">
+										<div class="portlet-body form">
+											<!-- BEGIN FORM-->
+											<form action="" class="form-horizontal">
+												<div class="control-group">
+													<label class="control-label">Nom</label>
+													<div class="controls">
+														<input id="form_name" type="text" placeholder="Nom" class="m-wrap" value="<%= name %>">
+													</div>
+												</div>
+
+
+												<div class="control-group">
+													<label class="control-label">Début</label>
+													<div class="controls">
+														<input id="start_date" type="text" class="m-wrap date-picker"value="<%= start_date %>">
+														<span class="help-inline">Date de début de l'offre</span>
+													</div>
+												</div>
+
+												<div class="control-group">
+													<label class="control-label">Fin</label>
+													<div class="controls">
+														<input id="end_date" type="text" class="m-wrap date-picker"value="<%= end_date %>">
+														<span class="help-inline">Date de fin de l'offre</span>
+													</div>
+												</div>
+
+												<div class="control-group">
+													<label class="control-label">Description longue</label>
+													<div class="controls">
+														<textarea class="large m-wrap" rows="3">
+															@TODO
+														</textarea>
+													</div>
+												</div>
+
+												<div class="control-group">
+													<label class="control-label">Modalités</label>
+													<div class="controls">
+														<textarea class="large m-wrap" rows="3"></textarea>
+													</div>
+												</div>
+												<div class="control-group">
+													<label class="control-label">Statut</label>
+													<div class="controls">
+														<label class="radio">
+															<div class="radio">
+																<span>
+																	<input type="radio" name="isOfferActivated" value="0"
+																	<% if(!is_activated) { %>
+																		checked="checked"
+																	<% } %>
+																	>
+																</span>
+															</div>
+															Inactif
+														</label>
+
+														<label class="radio">
+															<div class="radio">
+																<span class="checked">
+																	<input type="radio" name="isOfferActivated" value="1"
+																	<% if(is_activated) { %>
+																		checked="checked"
+																	<% } %>
+																	 style="">
+																</span>
+															</div>
+															Actif
+														</label>
+													</div>
+												</div>
+												<div class="form-actions">
+													<button type="submit" class="btn blue"><i class="icon-ok"></i>
+														Enregister
+													</button>
+													<button type="button" class="btn reset">
+														Annuler
+													</button>
+												</div>
+											</form>
+											<!-- END FORM--> 
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- END PAGE CONTENT-->         
+
+			</div>
