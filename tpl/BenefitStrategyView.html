@@ -33,8 +33,8 @@
 							<ul class="nav nav-tabs">
 								<li class=""><a href="#offer/<%= id %>" >Informations générales</a></li>
 								<li class=""><a class="" href="#offer/<%= id %>/participation" >Participation</a></li>
-								<li class="active"><a class="" href="#offer/<%= id %>/eligibility" >Eligibilité</a></li>
-								<li class=""><a class="" href="#offer/<%= id %>/benefit" >Gain</a></li>
+								<li class=""><a class="" href="#offer/<%= id %>/eligibility" >Eligibilité</a></li>
+								<li class="active"><a class="" href="#offer/<%= id %>/benefit" >Gain</a></li>
 								<li class=""><a class="" href="#offer/<%= id %>/diffusion" >Diffusion</a></li>
 							</ul>
 							<div class="tab-content">
@@ -48,7 +48,7 @@
 													<div class="controls">
 														<select id="form_strategy" class="span6 m-wrap" data-placeholder="Choose a Category" tabindex="1">
 
-	  <% _(available_strategies.eligibility).each(function(strategy) { %>
+	  <% _(available_strategies.benefit).each(function(strategy) { %>
           <option value="<%= strategy.id %>" <% if(eligibility_strategy.id == strategy.id ){ %> selected="selected" <% } %> ><%= strategy.name %></option>
       <% }); %>
 
@@ -128,7 +128,7 @@
         }
     };
 
-    var json = <%= JSON.stringify(eligibility_schema) %>;
+    var json = <%= JSON.stringify(benefit_schema) %>;
     window.jsonEditor = new jsoneditor.JSONEditor(container, options, json);
 
 </script>

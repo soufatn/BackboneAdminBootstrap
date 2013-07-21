@@ -10,6 +10,7 @@ window.Router = Backbone.Router.extend({
         "offer/:id"              : "offer",
         "offer/:id/participation": "offerParticipation",
         "offer/:id/eligibility"  : "offerEligibility",
+        "offer/:id/benefit"      : "offerBenefit",
         "offer/:id/diffusion"    : "offerDiffusion",
         "operations"             : "operations"
         
@@ -162,6 +163,24 @@ window.Router = Backbone.Router.extend({
       });
     },
 
+
+    offerBenefit: function(id) {
+      this.menuView.selectMenuItem('offer');
+      
+      var offer = new Offer({id: id});
+
+      var that = this;
+      that.loadingContent();
+      offer.fetch({
+          success: function (data) {
+            that.removeLoadingContent();
+            $('#appContent').html(new BenefitStrategyView({model: data}).render().el);
+            Template.beautifyForms();
+            //FormComponents.init();
+          }
+      });
+    },
+
     offerDiffusion: function(id) {
 
       this.menuView.selectMenuItem('offer');
@@ -230,6 +249,7 @@ templateLoader.load(
      "OfferView",
        "ParticipationStrategyView",
        "EligibilityStrategyView",
+       "BenefitStrategyView",
        "OfferDiffusionView"
      ],
     function () {
